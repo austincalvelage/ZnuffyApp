@@ -12,9 +12,14 @@ import {
   IonToolbar,
 } from '@ionic/react';
 import { useEffect, useState } from 'react';
-import { cog, flash, storefront } from 'ionicons/icons';
+import { cog, flash, storefront, paw } from 'ionicons/icons';
 
 const pages = [
+  {
+    title: 'Adopt',
+    icon: paw,
+    url: '/tabs/adopt',
+  },
   {
     title: 'Feed',
     icon: flash,
