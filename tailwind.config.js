@@ -1,11 +1,16 @@
 module.exports = {
-  purge: [],
-  darkMode: 'media',
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'montserrat': ['Montserrat', 'sans-serif'],
+      }
+    },
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
-};
+  plugins: [
+    require('tailwind-scrollbar-hide'),
+  ],
+}
