@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Card from '../ui/Card';
+import classNames from 'classnames';
 
 import {
   IonPage,
@@ -21,18 +22,43 @@ import { heartOutline } from 'ionicons/icons';
 import { cartOutline } from 'ionicons/icons';
 import { getHomeItems } from '../../store/selectors';
 import Store from '../../store';
+import FilterCarrousel from '../FilterCarrousel';
 
-const AdoptCard = ({ title, type, text, author, authorAvatar, image, dogImg }) => (
-  <Card className="my-4 mx-auto">
-    <div className='h-screen'>
-        <div className='flex w-full'>
-            <div className='w-1/2 text-center border-[#DADADA] border-b-2'>Adopt Dogs</div>
-            <div className='w-1/2 text-center border-[#DADADA/60] border-b-2'>Adopt Cats</div>
-        </div>
 
-    </div>
-  </Card>
-);
+
+const AdoptCard = () => {
+    const [animalType, setAnimalType] = useState('dog');
+    function animalToggle(event) {
+        setAnimalType(event.target.id)
+    }
+    return (
+        <Card className="my-4 mx-auto font-montserrat">
+            <div className='h-screen'>
+                <h1 className='text-2xl px-4 font-medium mb-10'>Welcome, Juan!</h1>
+                <div className='flex mb-10'>
+                    <a
+                        className={classNames('w-1/2 border-b-2 pb-2 text-center font-medium text-black/70 hover:cursor-pointer', animalType === 'dog' ? 'border-[#DADADA]' : 'border-[#DADADA/60] text-black/50 font-normal' )}
+                        id="dog"
+                        onClick={animalToggle}
+                    >
+                        Adopt Dogs
+                    </a>
+                    <a 
+                        className={classNames('w-1/2 border-b-2 pb-2 text-center font-medium text-black/70 hover:cursor-pointer', animalType === 'cat' ? 'border-[#DADADA]' : 'border-[#DADADA/60] text-black/50 font-normal' )}
+                        id="cat"
+                        onClick={animalToggle}
+                    >
+                        Adopt Cats
+                    </a>
+                </div>
+                <div className='pl-4 space-y-10'>
+                    <p className='text-black/50 text-center'>Help us find a new home to <span className='text-[#00A6EB]'>{0}</span> {`${animalType.charAt(0).toUpperCase() + animalType.substring(1)}'s`}</p>
+                    <FilterCarrousel animalFilter={animalType} />
+                </div>
+            </div>
+      </Card>
+    )
+};
 
 const Adopt = () => {
   const homeItems = Store.useState(getHomeItems);
@@ -40,12 +66,8 @@ const Adopt = () => {
 
   return (
     <IonPage>
-      <IonHeader>
+      <IonHeader className="ion-no-border">
         <IonToolbar>
-          <IonTitle>Adopt</IonTitle>
-          <IonButtons slot="start">
-            <IonMenuButton />
-          </IonButtons>
           <IonButtons slot="end">
           <IonButton onClick={() => console.log('set route for cart')}>
               <IonIcon icon={cartOutline} />
@@ -60,11 +82,6 @@ const Adopt = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding-top ion-padding-bottom">
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Welcome, Juan!</IonTitle>
-          </IonToolbar>
-        </IonHeader>
         <Notifications open={showNotifications} onDidDismiss={() => setShowNotifications(false)} />
         <AdoptCard />
       </IonContent>
