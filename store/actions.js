@@ -30,41 +30,43 @@ export const setDone = (list, item, done) => {
   });
 };
 
-// Commerce States
+// ==== Commerce States
+// --Get all Products
 export const setProducts = items => {
   Store.update(s => {
     s.allProducts = items;
   });
 };
 
+// --Get all Categories
 export const setCategories = categories => {
   Store.update(s => {
     s.allCategories = categories;
   });
 };
 
-// Display Cart
+// --Display Cart
 export const showCart = async cart => {
   Store.update(s => {
     s.getCart = cart;
   });
 };
 
-// ToggleCart
+// --ToggleCart
 export const toggleCartState = async state => {
   Store.update(s => {
     s.cartState = !s.cartState;
   });
 };
 
-// Get Cart State
+// --Get Cart State
 export const getCartState = async state => {
   Store.update(s => {
     s.cartState = state;
   });
 };
 
-// Add specific item to Cart
+// --Add specific item to Cart
 export const addToCart = item => {
   Store.update(s => {
     s.addToCart = item;
