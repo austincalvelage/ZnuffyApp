@@ -6,44 +6,49 @@ export const images = [
 
 export const homeItems = [
   {
-    title: 'Locky',
+    name: 'Locky',
     type: 'In adoption',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor..',
     author: 'Rudolph',
     authorAvatar: '/img/max.jpg',
     image: images[0],
-    dogImg:
-      'https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg',
+    img: 'https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg',
+    age: '3',
+    gender: 'male',
+    tag: 'new',
   },
   {
-    title: 'Ronald',
+    name: 'Ronald',
     type: 'Found',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod amet tempor..',
     author: 'Lucia',
     authorAvatar: '/img/max.jpg',
     image: images[1],
-    dogImg:
-      'https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg',
+    img: 'https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg',
+    age: '2',
+    gender: 'female',
   },
   {
-    title: 'Pavel',
+    name: 'Pavel',
     type: 'Lost',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod amet tempor..',
     author: 'Marcia',
     authorAvatar: '/img/max.jpg',
     image: images[2],
-    dogImg:
-      'https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg',
+    img: 'https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg',
+    age: '5',
+    gender: 'male',
   },
   {
-    title: 'Richard',
+    name: 'Richard',
     type: 'Open to Adopt',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit do set eiusmod amet tempor..',
     author: 'Jonas',
     authorAvatar: '/img/max.jpg',
     image: images[2],
-    dogImg:
-      'https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg',
+    img: 'https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg',
+    age: '1',
+    gender: 'male',
   },
 ];
 
