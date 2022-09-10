@@ -1,6 +1,6 @@
 import React from 'react';
 import { IonCard, IonCardHeader, IonCardSubtitle, IonLabel, IonButton, IonImg } from '@ionic/react';
-import ProductItem from '../pages/Store/ProductItem/ProductItem';
+import ProductItem from '../ProductItem/ProductItem';
 
 const CardCarrousel = ({ relatedProducts }) => {
   return (
