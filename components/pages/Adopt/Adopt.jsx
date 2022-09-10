@@ -67,7 +67,10 @@ const AdoptCard = props => {
           </p>
           <FilterCarrousel animalFilter={animalType} />
         </div>
-        <div className="flex overflow-x-auto">{props.children}</div>
+        <PetCard group="new comers" />
+        <PetCard group="Puppies" />
+        <PetCard group="Adult" />
+        <PetCard group="Energetic" />
       </div>
     </Card>
   );
@@ -96,9 +99,7 @@ const Adopt = () => {
       </IonHeader>
       <IonContent className="ion-padding-top ion-padding-bottom">
         <Notifications open={showNotifications} onDidDismiss={() => setShowNotifications(false)} />
-        <AdoptCard>
-          <PetCard />
-        </AdoptCard>
+        <AdoptCard />
       </IonContent>
     </IonPage>
   );
