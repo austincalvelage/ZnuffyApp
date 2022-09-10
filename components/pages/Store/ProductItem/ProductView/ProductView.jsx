@@ -22,7 +22,7 @@ import { commerce } from '../../../../../commerce/commerce';
 import Store from '../../../../../store';
 import * as actions from '../../../../../store/actions';
 import * as selectors from '../../../../../store/selectors';
-import CardCarrousel from '../../../../UI/CardCarrousel';
+import CardCarrousel from '../../UI/CardCarrousel';
 import Card from '../../../../UI/Card';
 
 const ProductView = ({ match }) => {
