@@ -3,7 +3,6 @@ import { IonRouterOutlet, IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel } 
 import { IonReactRouter } from '@ionic/react-router';
 import { cog, flash, storefront, paw } from 'ionicons/icons';
 
-
 import Home from './Feed';
 import MainStore from './Store/MainStore';
 import ListDetail from './Store/ListDetail';
@@ -12,7 +11,7 @@ import Settings from './Settings';
 import CartModal from './Store/Cart/CartModal/CartModal';
 import CartPage from './Store/Cart/CartPage';
 import ProductView from './Store/ProductItem/ProductView/ProductView';
-import Adopt from './Adopt';
+import Adopt from './Adopt/Adopt';
 
 const Tabs = () => {
   return (
@@ -28,7 +27,7 @@ const Tabs = () => {
         <Route path="/tabs" render={() => <Redirect to="/tabs/feed" />} exact={true} />
       </IonRouterOutlet>
       <IonTabBar slot="bottom">
-      <IonTabButton tab="tab1" href="/tabs/Adopt">
+        <IonTabButton tab="tab1" href="/tabs/Adopt">
           <IonIcon icon={paw} />
           <IonLabel>Adopt</IonLabel>
         </IonTabButton>

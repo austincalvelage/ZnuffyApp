@@ -22,8 +22,8 @@ import { commerce } from '../../../../../commerce/commerce';
 import Store from '../../../../../store';
 import * as actions from '../../../../../store/actions';
 import * as selectors from '../../../../../store/selectors';
-import CardCarrousel from '../../../../ui/CardCarrousel';
-import Card from '../../../../ui/Card';
+import CardCarrousel from '../../../../UI/CardCarrousel';
+import Card from '../../../../UI/Card';
 
 const ProductView = ({ match }) => {
   const [itemIsOpen, setItemIsOpen] = useState(true);

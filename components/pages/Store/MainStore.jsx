@@ -4,7 +4,7 @@ import * as actions from '../../../store/actions';
 import { useEffect } from 'react';
 import { commerce } from '../../../commerce/commerce';
 import Cart from './Cart/Cart';
-import Banner from '../../ui/Banner';
+import Banner from '../../UI/Banner';
 
 import { IonPage, IonHeader, IonToolbar, IonContent, IonGrid, IonRow } from '@ionic/react';
 

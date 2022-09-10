@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Card from '../ui/Card';
+import Card from '../UI/Card';
 
 import {
   IonPage,
