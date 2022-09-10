@@ -28,8 +28,8 @@ const ProductItem = ({ name, price, image, id }) => {
     <>
       <IonCol className="flex w-48 max-h-min" size-sm="6" size-md="4" size-lg="3">
         <IonCard className={`${classes.productCard}`}>
-          <IonImg src={image} alt="ion" onClick={() => history.replace(`/tabs/store/${id}`)} />
-          <IonCardHeader className="max-h-min" onClick={() => history.replace(`/tabs/store/${id}`)}>
+          <IonImg src={image} alt="ion" onClick={() => history.replace(`/store/${id}`)} />
+          <IonCardHeader className="max-h-min" onClick={() => history.replace(`/store/${id}`)}>
             <IonCardSubtitle className={`${classes.textOverflows}`}>{name}</IonCardSubtitle>
             <IonLabel>{price}</IonLabel>
           </IonCardHeader>

@@ -18,22 +18,17 @@ const pages = [
   {
     title: 'Adopt',
     icon: paw,
-    url: '/tabs/adopt',
-  },
-  {
-    title: 'Feed',
-    icon: flash,
-    url: '/tabs/feed',
+    url: '/adopt',
   },
   {
     title: 'Store',
     icon: storefront,
-    url: '/tabs/store',
+    url: '/store',
   },
   {
     title: 'Settings',
     icon: cog,
-    url: '/tabs/settings',
+    url: '/settings',
   },
 ];
 

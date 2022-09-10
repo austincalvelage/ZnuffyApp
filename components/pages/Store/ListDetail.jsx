@@ -34,7 +34,7 @@ const ListDetail = ({ match }) => {
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">
-            <IonBackButton defaultHref="/tabs/store" />
+            <IonBackButton defaultHref="/store" />
           </IonButtons>
           <IonTitle>{lists.name}</IonTitle>
         </IonToolbar>

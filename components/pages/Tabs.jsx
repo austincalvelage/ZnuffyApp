@@ -1,7 +1,7 @@
 import { Redirect, Route } from 'react-router-dom';
 import { IonRouterOutlet, IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { cog, flash, storefront, paw } from 'ionicons/icons';
+import { cog, storefront, paw, newspaperOutline, addOutline } from 'ionicons/icons';
 
 import Home from './Feed';
 import MainStore from './Store/MainStore';
@@ -17,29 +17,32 @@ const Tabs = () => {
   return (
     <IonTabs>
       <IonRouterOutlet>
-        <Route path="/tabs/adopt" component={Adopt} exact={true} />
-        <Route path="/tabs/feed" component={Home} exact={true} />
-        <Route path="/tabs/store" component={MainStore} exact={true} />
-        {/* <Route path="/tabs/store/:listId" component={ListDetail} exact={true} /> */}
-        <Route path="/tabs/store/cart" component={CartPage} exact={true} />
-        <Route path="/tabs/store/:id" component={ProductView} exact={true} />
-        <Route path="/tabs/settings" component={Settings} exact={true} />
-        <Route path="/tabs" render={() => <Redirect to="/tabs/feed" />} exact={true} />
+        <Route path="/adopt" component={Adopt} exact={true} />
+        {/* Store */}
+        <Route path="/store" component={MainStore} exact={true} />
+        <Route path="/store/cart" component={CartPage} exact={true} />
+        <Route path="/store/:id" component={ProductView} exact={true} />
+        {/* Settings */}
+        <Route path="/settings" component={Settings} exact={true} />
       </IonRouterOutlet>
-      <IonTabBar slot="bottom">
-        <IonTabButton tab="tab1" href="/tabs/Adopt">
+      <IonTabBar slot="bottom" className="p-2">
+        <IonTabButton tab="tab1" href="/Adopt">
           <IonIcon icon={paw} />
           <IonLabel>Adopt</IonLabel>
         </IonTabButton>
-        <IonTabButton tab="tab2" href="/tabs/feed">
-          <IonIcon icon={flash} />
-          <IonLabel>Feed</IonLabel>
+        <IonTabButton tab="tab2" href="/lostAndFound">
+          <IonIcon icon={newspaperOutline} />
+          <IonLabel>{'Lost & found'}</IonLabel>
         </IonTabButton>
-        <IonTabButton tab="tab3" href="/tabs/store">
+        <IonTabButton tab="tab3" href="/add">
+          <IonIcon icon={addOutline} />
+          <IonLabel>ADD</IonLabel>
+        </IonTabButton>
+        <IonTabButton tab="tab4" href="/store">
           <IonIcon icon={storefront} />
           <IonLabel>Shop</IonLabel>
         </IonTabButton>
-        <IonTabButton tab="tab4" href="/tabs/settings">
+        <IonTabButton tab="tab5" href="/settings">
           <IonIcon icon={cog} />
           <IonLabel>Settings</IonLabel>
         </IonTabButton>
