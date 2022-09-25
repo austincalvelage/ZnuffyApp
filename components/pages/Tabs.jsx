@@ -5,13 +5,13 @@ import { cog, storefront, paw, newspaperOutline, addOutline } from 'ionicons/ico
 
 import Home from './Feed';
 import MainStore from './Store/MainStore';
-import ListDetail from './Store/ListDetail';
 import Settings from './Settings';
 
 import CartModal from './Store/Cart/CartModal/CartModal';
 import CartPage from './Store/Cart/CartPage';
 import ProductView from './Store/ProductItem/ProductView/ProductView';
 import Adopt from './Adopt/Adopt';
+import PostPet from './Adopt/PostPet/PostPet';
 
 const Tabs = () => {
   return (
@@ -24,6 +24,8 @@ const Tabs = () => {
         <Route path="/store/:id" component={ProductView} exact={true} />
         {/* Settings */}
         <Route path="/settings" component={Settings} exact={true} />
+        {/* Adoption */}
+        <Route path="/post" component={PostPet} exact={true} />
       </IonRouterOutlet>
       <IonTabBar slot="bottom" className="p-2">
         <IonTabButton tab="tab1" href="/Adopt">
@@ -34,7 +36,7 @@ const Tabs = () => {
           <IonIcon icon={newspaperOutline} />
           <IonLabel>{'Lost & found'}</IonLabel>
         </IonTabButton>
-        <IonTabButton tab="tab3" href="/add">
+        <IonTabButton tab="tab3" href="/post">
           <IonIcon icon={addOutline} />
           <IonLabel>ADD</IonLabel>
         </IonTabButton>

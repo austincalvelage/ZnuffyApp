@@ -10,6 +10,7 @@ const PetCard = props => {
   const [animalsList, setAnimalsList] = useState();
 
   useEffect(() => {
+    debugger;
     const fetchAllAnimals = async () => {
       const data = await fetch('https://znuffy.herokuapp.com/api/animals/all');
       const resp = await data.json();
@@ -20,7 +21,7 @@ const PetCard = props => {
   }, []);
 
   return (
-    <div className="flex flex-col h-2/5">
+    <div className="flex flex-col" style={{ maxHeight: '50vh' }}>
       {props.group ? <h3 className="m-3">{props.group}</h3> : null}
       <div className="flex overflow-x-auto">
         {animalsList !== undefined &&
@@ -49,7 +50,7 @@ const PetCard = props => {
                 </div>
                 <div className="px-4 py-4 bg-white rounded-b-xl dark:bg-gray-900">
                   <div className="flex flex-column justify-between items-center">
-                    <h2 className="font-medium text-2xl text-gray-800 dark:text-gray-100 py-1">
+                    <h2 className="font-medium text-2xl text-gray-800 dark:text-gray-100 py-1 truncate">
                       {pet.name}
                     </h2>
                     <IonIcon icon={heartOutline} className="text-2xl" />
